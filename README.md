@@ -1,21 +1,35 @@
-# React + Vite
+# Lib Design | HTML, CSS, JavaScript & React
 
-Lib Design
+Lib Design é uma biblioteca de componentes e fundamentos de interface construída com HTML, CSS, JavaScript e React.
 
+O objetivo é oferecer uma base sólida, escalável e reutilizável para criação de interfaces modernas, organizadas e consistentes.
 
+# Sobre o projeto
 
+A Lib Design nasce como um ecossistema de UI focado em:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Componentes reutilizáveis
 
-Currently, two official plugins are available:
+Estrutura modular
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Padronização visual
 
-## React Compiler
+Boas práticas de CSS e arquitetura
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Integração com JavaScript puro e React
 
-## Expanding the ESLint configuration
+Ela pode ser utilizada tanto em projetos estáticos quanto em aplicações SPA, servindo como fundação para sistemas maiores.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Tecnologias
+
+HTML5
+
+CSS3
+
+JavaScript (ES6+)
+
+React
+
+# Propósito
+
+Criar uma biblioteca de design leve, organizada e preparada para crescimento, permitindo desenvolvimento mais rápido, consistente e profissional.
