@@ -16,7 +16,8 @@
 @layer base {
   :root {
     color-scheme: light dark;
-    font-family: "Inter", sans-serif;
+    --font-family: "Inter", sans-serif;
+    font-family: var(--font-family);
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
@@ -27,13 +28,160 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Define the typography scale. */
+    --font-size-1: 0.25rem; /* 4px */
+    --font-size-2: 0.5rem; /* 8px */
+    --font-size-3: 0.75rem; /* 12px */
+    --font-size-4: 1rem; /* 16px */
+    --font-size-5: 1.25rem; /* 20px */
+    --font-size-6: 1.5rem; /* 24px */
+    --font-size-7: 1.75rem; /* 28px */
+    --font-size-8: 2rem; /* 32px */
+    --font-size-9: 2.25rem; /* 36px */
+    --font-size-10: 2.5rem; /* 40px */
+    --font-size-11: 2.75rem; /* 44px */
+    --font-size-12: 3rem; /* 48px */
+    --font-size-13: 3.25rem; /* 52px */
+    --font-size-14: 3.5rem; /* 56px */
+    --font-size-15: 3.75rem; /* 60px */
+    --font-size-16: 4rem; /* 64px */
+    --font-size-17: 4.25rem; /* 68px */
+    --font-size-18: 4.5rem; /* 72px */
+    --font-size-19: 4.75rem; /* 76px */
+    --font-size-20: 5rem; /* 80px */
+
+    /* Define the color palette. */
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-primary: hsl(240 100% 50%);
+    --color-secondary: hsl(240 100% 50%);
+    --color-background: hsl(0 0% 100%);
+    --color-text: hsl(0 0% 0%);
+
+    /* Light/Dark */
+    --light-hue: 0;
+    --light-chroma: 0;
+    --dark-hue: 0;
+    --dark-chroma: 0;
+
+    --color-white: oklch(1 var(--light-chroma) var(--light-hue));
+    --color-dark: oklch(0 var(--dark-chroma) var(--dark-hue));
+
+    /* Brand colors */
+    --brand-hue: 240;
+    --brand-chroma: 0.15;
+
+    /* Define the spacing scale. */
+    --space-1: 0.25rem; /* 4px */
+    --space-2: 0.5rem; /* 8px */
+    --space-3: 0.75rem; /* 12px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.25rem; /* 20px */
+    --space-6: 1.5rem; /* 24px */
+    --space-7: 1.75rem; /* 28px */
+    --space-8: 2rem; /* 32px */
+    --space-9: 2.25rem; /* 36px */
+    --space-10: 2.5rem; /* 40px */
+    --space-11: 2.75rem; /* 44px */
+    --space-12: 3rem; /* 48px */
+    --space-13: 3.25rem; /* 52px */
+    --space-14: 3.5rem; /* 56px */
+    --space-15: 3.75rem; /* 60px */
+    --space-16: 4rem; /* 64px */
+    --space-17: 4.25rem; /* 68px */
+    --space-18: 4.5rem; /* 72px */
+    --space-19: 4.75rem; /* 76px */
+    --space-20: 5rem; /* 80px */
+
+    /* Define the border radius scale. */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-round: 9999px;
+
+    /* Define the shadow scale. */
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-3: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* Define the transition scale. */
+    --transition-1: 150ms;
+    --transition-2: 300ms;
+    --transition-3: 500ms;
+
+    /* Define the breakpoints. */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+
+    /* Typography */
+
+    --clamp-xxl: clamp(4rem, 3.6479rem + 1.5023vw, 5rem); /* 64px - 80px */
+    --clamp-xl: clamp(3.5rem, 3.1479rem + 1.5023vw, 4.5rem); /* 56px - 72px */
+    --clamp-lg: clamp(3rem, 2.6479rem + 1.5023vw, 4rem); /* 48px - 64px */
+    --clamp-md: clamp(2rem, 1.6479rem + 1.5023vw, 3rem); /* 32px - 48px */
+    --clamp-sm: clamp(1.25rem, 0.8979rem + 1.5023vw, 2.25rem); /* 20px - 36px */
+    --clamp-xs: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem); /* 16px - 24px */
+    --clamp-xxs: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem); /* 14px - 16px */
+    --clamp-caption: clamp(
+      0.625rem,
+      0.581rem + 0.1878vw,
+      0.75rem
+    ); /* 10px - 12px */
+
+    --big: 600 var(--clamp-xxl)/1.1 var(--font-family);
+    --heading-xl: 600 var(--clamp-xl)/1.1 var(--font-family);
+    --heading-lg: 600 var(--clamp-lg)/1.1 var(--font-family);
+    --heading: 600 var(--clamp-md)/1.1 var(--font-family);
+    --subheading: 400 var(--clamp-sm)/1.5 var(--font-family);
+    --subheading-sm: 400 var(--clamp-xs)/1.5 var(--font-family);
+    --text: 400 var(--clamp-xxs)/1.5 var(--font-family);
+    --caption: 400 var(--clamp-caption)/1.5 var(--font-family);
+
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.05em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+  }
+  html {
+    font-size: 16px;
   }
 
   body {
     display: flex;
     place-items: center;
     place-content: center;
-
     min-height: 100vh;
+    background-color: var(--color-dark);
+    background-color: var(--color-white);
+  }
+  h1 {
+    font: var(--big);
+  }
+  h2 {
+    font: var(--heading-xl);
+  }
+  h3 {
+    font: var(--heading-lg);
+  }
+  h4 {
+    font: var(--heading);
+  }
+  h5 {
+    font: var(--subheading);
+  }
+  h6 {
+    font: var(--subheading-sm);
+  }
+  p {
+    font: var(--text);
+  }
+  small,
+  .caption {
+    font: var(--caption);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
   }
 }
