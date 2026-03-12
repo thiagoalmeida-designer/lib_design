@@ -184,4 +184,32 @@
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide);
   }
+
+  .header {
+    grid-area: header;
+    min-height: var(--space-16);
+  }
+  .main {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+    min-height: var(--space-16);
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "header header header header header header header header header header header header"
+      "menu menu menu main main main main main main main main main"
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+    gap: var(--space-4);
+  }
+  .container {
+    padding: var(--space-8);
+    margin: 0 auto;
+  }
 }

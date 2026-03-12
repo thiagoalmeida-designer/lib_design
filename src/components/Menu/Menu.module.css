@@ -1,0 +1,6 @@
+.menu {
+  grid-area: menu;
+  background-color: #f0f0f0;
+  padding: var(--space-8);
+  font-size: 1.2rem;
+}
